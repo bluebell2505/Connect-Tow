@@ -63,6 +63,11 @@ app.get('/services', (req, res) => {
   res.render('pages/Service');
 });
 
+// Services page
+app.get('/service-map', (req, res) => {
+  res.render('pages/service_map');
+});
+
 // Login page
 app.get('/login', (req, res) => {
   res.render('login');

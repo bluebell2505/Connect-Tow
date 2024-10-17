@@ -12,72 +12,107 @@
     
     body {
         font-family: Arial, sans-serif;
-        background-color: #fff;
+        background-color: #f9f9f9;
+        margin: 20px;
+        color: #333;
     }
     
     .navbar-placeholder {
         height: 60px; /* Space for the navbar */
         background-color: #fff;
+        margin-left: 100px;
     }
     
     .container {
+        max-width: 1200px; /* Center and limit width */
+        margin: 20px auto; /* Center the container */
         text-align: center;
-        margin: 20px;
-        color: #333;
+        padding: 20px;
+        background-color: #fff; /* White background for contrast */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
     }
     
     h1 {
-        font-size: 2em;
+        font-size: 2.5em; /* Increased size for better visibility */
         color: #FF4500; /* Orange color */
+        margin-bottom: 10px; /* Space below heading */
     }
     
     p {
-        margin-bottom: 20px;
+        margin-bottom: 30px; /* Increased space for readability */
         color: #555;
+        font-size: 1.1em; /* Slightly larger font for better readability */
     }
     
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Increased minimum size */
+        gap: 30px; /* Increased gap for better spacing */
         padding: 20px;
     }
     
     .service-card {
-        background-color: #FFFAF0;
-        border: 1px solid #FF4500;
+        background-color: #FFFAF0; /* Light background */
+        border: 1px solid #FF4500; /* Orange border */
         padding: 20px;
         text-align: center;
-        border-radius: 8px;
+        border-radius: 12px; /* More rounded corners */
         transition: transform 0.3s ease, background-color 0.3s ease;
         cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        position: relative; /* For pseudo-element positioning */
     }
     
     .service-card img {
-        width: 50px;
-        margin-bottom: 10px;
+        width: 60px; /* Slightly larger images */
+        margin-bottom: 15px; /* Increased space below images */
+        transition: transform 0.3s ease; /* Image animation */
     }
     
     .service-card p {
-        font-size: 1.1em;
-        color: #FF4500;
+        font-size: 1.2em; /* Slightly larger text */
+        color: #FF4500; /* Maintain orange color */
     }
     
     .service-card:hover {
-        background-color: #FF4500;
-        color: white;
-        transform: scale(1.05);
+        background-color: #FF4500; /* Change background on hover */
+        color: white; /* Change text color on hover */
+        transform: scale(1.05); /* Scale up on hover */
+    }
+    
+    .service-card:hover img {
+        transform: scale(1.1); /* Slightly enlarge the image on hover */
     }
     
     .service-card:hover p {
-        color: white;
+        color: white; /* Change paragraph color on hover */
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2em; /* Adjust font size on smaller screens */
+        }
+    
+        p {
+            font-size: 1em; /* Adjust paragraph size */
+        }
+    
+        .service-card {
+            padding: 15px; /* Less padding on smaller screens */
+        }
+    
+        .services-grid {
+            gap: 20px; /* Adjust grid gap */
+        }
     }
     </style>
 </head>
 <body>
     <!-- Navbar Space -->
     <div class="navbar-placeholder">
-        <!-- Add your navbar here -->
+        <%- include('../partials/Nav') %>
     </div>
 
     <!-- Main Section -->
