@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Services</title>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+    }
+    
+    .navbar-placeholder {
+        height: 60px; /* Space for the navbar */
+        background-color: #fff;
+    }
+    
+    .container {
+        text-align: center;
+        margin: 20px;
+        color: #333;
+    }
+    
+    h1 {
+        font-size: 2em;
+        color: #FF4500; /* Orange color */
+    }
+    
+    p {
+        margin-bottom: 20px;
+        color: #555;
+    }
+    
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .service-card {
+        background-color: #FFFAF0;
+        border: 1px solid #FF4500;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .service-card img {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .service-card p {
+        font-size: 1.1em;
+        color: #FF4500;
+    }
+    
+    .service-card:hover {
+        background-color: #FF4500;
+        color: white;
+        transform: scale(1.05);
+    }
+    
+    .service-card:hover p {
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <!-- Navbar Space -->
+    <div class="navbar-placeholder">
+        <!-- Add your navbar here -->
+    </div>
+
+    <!-- Main Section -->
+    <div class="container">
+        <h1>Car Services Available In Pune</h1>
+        <p>Get affordable and hassle-free periodic car service, car repair, wheel care services, cashless insurance claims, and much more in Queen of the Deccan, Pune.</p>
+
+        <!-- Services Section -->
+        <div class="services-grid">
+            <div class="service-card" id="service1">
+                <img src="placeholder.png" alt="Periodic Services">
+                <p>Periodic Services</p>
+            </div>
+            <div class="service-card" id="service2">
+                <img src="placeholder.png" alt="AC Service & Repair">
+                <p>AC Service & Repair</p>
+            </div>
+            <div class="service-card" id="service3">
+                <img src="placeholder.png" alt="Batteries">
+                <p>Batteries</p>
+            </div>
+            <div class="service-card" id="service4">
+                <img src="placeholder.png" alt="Tyres & Wheel Care">
+                <p>Tyres & Wheel Care</p>
+            </div>
+            <div class="service-card" id="service5">
+                <img src="placeholder.png" alt="Denting & Painting">
+                <p>Denting & Painting</p>
+            </div>
+            <div class="service-card" id="service6">
+                <img src="placeholder.png" alt="Detailing Services">
+                <p>Detailing Services</p>
+            </div>
+            <div class="service-card" id="service7">
+                <img src="placeholder.png" alt="Car Spa & Cleaning">
+                <p>Car Spa & Cleaning</p>
+            </div>
+            <div class="service-card" id="service8">
+                <img src="placeholder.png" alt="Car Inspections">
+                <p>Car Inspections</p>
+            </div>
+            <div class="service-card" id="service9">
+                <img src="placeholder.png" alt="Windshields & Lights">
+                <p>Windshields & Lights</p>
+            </div>
+            <div class="service-card" id="service10">
+                <img src="placeholder.png" alt="Suspension & Fitments">
+                <p>Suspension & Fitments</p>
+            </div>
+            <div class="service-card" id="service11">
+                <img src="placeholder.png" alt="Clutch & Body Parts">
+                <p>Clutch & Body Parts</p>
+            </div>
+            <div class="service-card" id="service12">
+                <img src="placeholder.png" alt="Insurance Claims">
+                <p>Insurance Claims</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // script.js
+
+// Add the links to the services
+const serviceLinks = {
+    service1: 'periodic-services.html',
+    service2: 'ac-service-repair.html',
+    service3: 'batteries.html',
+    service4: 'tyres-wheel-care.html',
+    service5: 'denting-painting.html',
+    service6: 'detailing-services.html',
+    service7: 'car-spa-cleaning.html',
+    service8: 'car-inspections.html',
+    service9: 'windshields-lights.html',
+    service10: 'suspension-fitments.html',
+    service11: 'clutch-body-parts.html',
+    service12: 'insurance-claims.html'
+};
+
+// Add event listeners to the service cards
+document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const cardId = card.id;
+        if (serviceLinks[cardId]) {
+            window.location.href = serviceLinks[cardId];
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
