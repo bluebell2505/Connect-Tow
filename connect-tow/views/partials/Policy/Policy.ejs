@@ -5,6 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Policy Information</title>
     <link rel="stylesheet" href="Policy.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.service-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-box h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.service-box img {
+  width: 120px;
+  height: auto;
+  float: left;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.service-details {
+  overflow: hidden; /* Clears the floating image */
+  padding: 10px 0;
+}
+
+.service-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-details ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.service-details .check {
+  color: green;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.price-container {
+  margin-top: 20px;
+}
+
+.price {
+  font-size: 22px;
+  color: rgb(14, 167, 12);
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e60000;
+  color: white;
+  text-decoration: none;
+  margin-top: 15px;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: rgb(29, 29, 29);
+}
+
+.response-time {
+  float: right;
+  color: gray;
+  font-size: 0.9em;
+  margin-top: -20px; /* Align with h2 */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .service-box {
+    padding: 15px;
+  }
+
+  .service-box img {
+    width: 80px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .original-price {
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .response-time {
+    font-size: 0.85em;
+  }
+}
+
+    </style>
 </head>
 <body>
     <div class="App">
