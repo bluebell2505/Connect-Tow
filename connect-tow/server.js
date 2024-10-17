@@ -16,9 +16,19 @@ app.get('/about', function(req, res) {
   res.render('pages/about');
 });
 
-// about page
+// services page
 app.get('/Services', function(req, res) {
   res.render('pages/Service');
+});
+
+// login page
+app.get('/login', function(req, res) {
+  res.render('login');
+});
+
+// register page
+app.get('/register', function(req, res) {
+  res.render('register');
 });
 
 app.listen(8080);
