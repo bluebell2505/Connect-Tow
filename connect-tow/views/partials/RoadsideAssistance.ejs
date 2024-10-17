@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefining Roadside Assistance</title>
+    <link rel="stylesheet" href="Roadside.css"> <!-- Link to your CSS file -->
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        /* background-color: #0b1e28;
+        color: #e0f7ff; */
+      }
+      
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+        background-color: #dcdfe04d;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        max-width: 1200px;
+        margin: 50px auto;
+        gap: 20px;
+      }
+      
+      .text-section {
+        max-width: 50%;
+        padding-right: 20px;
+      }
+      
+      h1 {
+        font-size: 52px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: black;
+      }
+      
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #6b2307;
+        margin-bottom: 30px;
+      }
+      
+      .image-section {
+        max-width: 40%;
+      }
+      
+      .image-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.6);
+        transition: transform 0.3s ease;
+      }
+      
+      .image-section img:hover {
+        transform: scale(1.05);
+      }
+      
+      /* Add a call-to-action button */
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: black;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .button:hover {
+        color: white;
+        background-color: rgb(29, 29, 29);
+      }
+      
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          text-align: center;
+          padding: 30px;
+        }
+      
+        .text-section {
+          max-width: 100%;
+          padding: 0;
+        }
+      
+        .image-section {
+          max-width: 100%;
+          margin-top: 20px;
+        }
+      
+        h1 {
+          font-size: 36px;
+        }
+      
+        p {
+          font-size: 16px;
+        }
+      
+        .button {
+          padding: 10px 20px;
+          font-size: 16px;
+        }
+      }
+      
+</style>
+<body>
+    <div class="container">
+        <div class="text-section">
+            <h1>Redefining Roadside Assistance</h1>
+            <p>
+                What does that mean? It means we looked at this industry and realized
+                the only way to provide truly exceptional, reliable roadside assistance
+                was to completely rethink the technology backbone for these services.
+            </p>
+            <a href="#services" class="button">Learn More</a>
+        </div>
+        <div class="image-section">
+            <img src="road.jpg" alt="Roadside Assistance App">
+        </div>
+    </div>
+
+    <script>
+        // Example JavaScript for smooth scrolling (optional)
+        const learnMoreButton = document.querySelector('.button');
+
+        learnMoreButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default anchor behavior
+            const targetId = learnMoreButton.getAttribute('href'); // Get target ID
+            const targetElement = document.querySelector(targetId); // Select the target element
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to target
+            }
+        });
+    </script>
+</body>
+</html>
