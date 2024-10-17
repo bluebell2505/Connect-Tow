@@ -1,0 +1,135 @@
+
+  
+.main-section {
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    margin-left: -140px;
+    margin-right: -140px;
+    margin-top: 140px;
+  }
+  
+  .towing-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px; /* Reduced gap for better alignment */
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 60px; /* Reduced padding for a tighter fit */
+  }
+  
+  .towing-image img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .towing-description {
+    max-width: 600px;
+  }
+  
+  .towing-description h2 {
+    font-size: 32px; /* Slightly reduced size for consistency */
+    margin-bottom: 10px; /* Reduced margin */
+    color: #333; /* Dark text for contrast */
+  }
+  
+  .towing-description p {
+    font-size: 18px; /* Slightly reduced size */
+    line-height: 1.5; /* Slightly tighter line height */
+    color: #555; /* Slightly darker text for readability */
+  }
+  
+  /* Contact Marquee Section */
+  .contact-marquee {
+    overflow: hidden;
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border-top: 5px solid #ff4500; /* Top border for emphasis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  
+  .contact-info {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 15s linear infinite; /* Slowed down for smoother effect */
+    font-size: 24px; /* Reduced font size for balance */
+    font-weight: bold;
+    padding-left: 100%; /* Start the animation off-screen */
+  }
+  
+  /* Adjust this for better spacing */
+  .contact-text {
+    color: #ff4500; /* Orange color for emphasis */
+    margin-right: 20px; /* Reduced spacing */
+  }
+  
+  .contact-number {
+    color: #333; /* Dark color for the phone number */
+  }
+  
+  /* Marquee animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0); /* Start from the left */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to the left completely */
+    }
+  }
+  
+  /* Pause animation on hover */
+  .contact-marquee:hover .contact-info {
+    animation-play-state: paused; /* Pause the animation */
+  }
+  
+  /* Floating Call Button */
+  .floating-call-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff; /* Change to blue for better contrast */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensure it is on top of other elements */
+  }
+  
+  .call-button {
+    text-decoration: none;
+    color: white; /* White color for the telephone icon */
+    font-size: 30px; /* Increased size for better visibility */
+  }
+  
+  .floating-call-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Enquiry Button */
+  .enquiry-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    color: white;
+    background-color: #28a745; /* Green background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .enquiry-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Information</title>
+    <link rel="stylesheet" href="Policy.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="App">
+        <div class="container">
+            <div class="service-box">
+                <h2>
+                    Know Your Policy 
+                    <span class="response-time">Call Within 2 Hour</span>
+                </h2>
+                <div class="service-details">
+                    <img src="insurance.jpg" alt="Policy Image">
+                    <ul>
+                        <li><span class="check">✔</span>Complete Information about your Policy</li>
+                        <li><span class="check">✔</span>Suggestions on Purchase of New Policy</li>
+                        <li><span class="check">✔</span>Vehicle IDV and Premium Rate Suggestions</li>
+                        <li><span class="check">✔</span>Expenditure Assessment</li>
+                        <li><span class="check">✔</span>Connect with Insurance Agent</li>
+                    </ul>
+                </div>
+                <div class="price-container">
+                    <span class="price">₹100</span>
+                    <span class="original-price">₹111</span>
+                </div>
+                <a href="#" class="button add-to-cart">+ ADD TO CART</a>
+            </div>
+
+            <div class="service-box">
+                <h2>
+                    Accidental Denting & Painting (Insurance)
+                    <span class="response-time">Takes 24 Hours</span>
+                </h2>
+                <div class="service-details">
+                    <img src="car.jpg" alt="Repairs Image">
+                    <ul>
+                        <li><span class="check">✔</span>Accidental Repair in Insurance</li>
+                        <li><span class="check">✔</span>Surveyor Estimate Approval</li>
+                        <li><span class="check">✔</span>File Charge Included</li>
+                        <li><span class="check">✔</span>Claim Intimation</li>
+                        <li><span class="check">✔</span>Body Panel Replacement (If Required)</li>
+                    </ul>
+                </div>
+                <div class="price-container">
+                    <span class="price">₹2150</span>
+                    <span class="original-price">₹2399</span>
+                </div>
+                <a href="#" class="button add-to-cart">+ ADD TO CART</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Example JavaScript for adding items to cart
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default anchor behavior
+                alert('Item added to cart!'); // Display an alert
+                // Here you can add functionality to handle cart logic
+            });
+        });
+    </script>
+</body>
+</html>
