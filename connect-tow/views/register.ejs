@@ -3,37 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign/Register Page</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFAF0; /* Off-white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #FFFAF0;
+}
+
+.form-wrapper {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px; /* Increased width */
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #FF4500; /* Orange color */
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px; /* Slightly increased padding */
+    font-size: 1em;
+    border: 1px solid #FF4500;
+    border-radius: 5px;
+    background-color: #FFF8F0;
+    color: #333;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #FF4500;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.3);
+}
+
+.register-btn {
+    background-color: #FF4500;
+    color: white;
+    padding: 14px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.register-btn:hover {
+    background-color: #FF5722; /* Slightly darker orange */
+}
+
+.register-btn:focus {
+    outline: none;
+}
+
+/* SignIn Section */
+.signin-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.signin-section p {
+    color: #555;
+    font-size: 1em;
+}
+
+.signin-btn {
+    background-color: #FF4500;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signin-btn:hover {
+    background-color: #FF5722;
+}
+
+@media (max-width: 600px) {
+    .form-wrapper {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .signin-section {
+        flex-direction: column;
+    }
+
+    .signin-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+    </style>
 </head>
 <body>
-    <section id="Sign-in">
-        <div class="wrapper">
-            <div class="form-wrapper sign-up">
-                <form action="/register" method="POST">
-                    <h2>Sign Up</h2>
-                    <div class="input-group">
-                        <input type="text" required name="username" placeholder="Username">
-                        <label for="username">Username</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" required name="email" placeholder="Email">
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="password" required name="password" placeholder="Password">
-                        <label for="password">Password</label>
-                    </div>
-                    <button type="submit" class="btn">Sign Up</button>
-                    <div class="sign-link">
-                        <p>Already have an account? <a href="/login" class="signIn-link">Sign In</a></p>
-                    </div>
-                </form>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Register</h1>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+
+            <!-- SignIn Section -->
+            <div class="signin-section">
+                <p>Already registered?</p>
+                <button class="signin-btn">Sign In</button>
             </div>
-    
         </div>
-    </section>
-    
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
+
+
