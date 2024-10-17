@@ -146,10 +146,6 @@ button.btn:hover {
                 <form action="/login" method="POST" id="login-form">
                     <h2>Login</h2>
                     <div class="input-group">
-                        <input type="text" required name="username" id="username" placeholder="Username">
-                        <label for="username">Username</label>
-                    </div>
-                    <div class="input-group">
                         <input type="email" required name="email" placeholder="Email">
                         <label for="email">Email</label>
                     </div>
@@ -165,10 +161,21 @@ button.btn:hover {
                         <p>Don't have an account? <a href="/register" class="signUp-link">Sign Up</a></p>
                     </div>
                 </form>
+                
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check if the user is logged in
+            const userId = '<%= userId %>'; // Pass the session variable from the server to the template
+
+            if (userId) {
+                // User is logged in, hide login button
+                document.querySelector('button.btn').style.display = 'none'; // Hide the login button
+            }
+        });
+    </script>
 </body>
 </html>
