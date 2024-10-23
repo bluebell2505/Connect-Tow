@@ -6,89 +6,108 @@
     <title>Checkout</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             color: #333;
         }
-
+        
         h1 {
             text-align: center;
             color: #ff6600;
+            margin-top: 30px;
+            font-size: 2.5rem;
         }
-
+        
         .container {
             display: flex;
-            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             padding: 20px;
         }
-
+        
         .cart {
             width: 100%;
-            padding-left: 20px;
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
         }
-
+        
         .cart h2 {
             color: #ff6600;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
         }
-
+        
         .cart ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
-
+        
         .cart ul li {
-            padding: 8px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #ddd;
-        }
-
-        .cart-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .cart-item span {
-            margin: 0 5px;
+            margin: 0 10px;
         }
-
-        /* Small + and - buttons */
+        
         .cart-item button {
             background-color: transparent;
             color: #ff6600;
             border: 1px solid #ff6600;
-            padding: 3px 6px;
-            border-radius: 5px;
+            padding: 0; /* Remove padding to better fit the circular shape */
+            border-radius: 50%; /* Make the button circular */
             cursor: pointer;
-            font-size: 12px;
-            margin: 0 3px;
-            outline: none;
+            font-size: 16px; /* Adjust font size if needed */
+            width: 30px; /* Set width */
+            height: 30px; /* Set height equal to width */
+            display: flex; /* Use flexbox to center the content */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-
+        
         .cart-item button:hover {
             background-color: #ff6600;
             color: white;
         }
-
+        
         .cart button {
             background-color: #ff6600;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 12px 20px;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
             width: 100%;
             margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
-
+        
+        .cart button:hover {
+            background-color: #e65c00;
+        }
+        
         .total-price {
             font-weight: bold;
+            font-size: 1.4rem;
+            text-align: right;
             margin-top: 10px;
         }
-
+        
     </style>
 </head>
 <body>
@@ -101,7 +120,7 @@
             <ul id="cart-items">
                 <!-- Cart items will be dynamically added here -->
             </ul>
-            <div class="total-price">Total: $<span id="total-price">0</span></div>
+            <div class="total-price">Total: ₹<span id="total-price">0</span></div>
             <button onclick="placeOrder()">Place Order</button>
         </div>
     </div>
@@ -121,7 +140,7 @@
 
                 // Create item name and price span
                 const nameSpan = document.createElement('span');
-                nameSpan.textContent = `${item.name} ($${item.price})`;
+                nameSpan.textContent = `${item.name} (₹${item.price})`;
 
                 // Create quantity control buttons
                 const quantitySpan = document.createElement('span');

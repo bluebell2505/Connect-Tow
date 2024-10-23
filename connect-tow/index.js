@@ -78,6 +78,14 @@ app.get('/register', (req, res) => {
   res.render('register');
 });
 
+app.get('/servicepro', (req, res) => {
+  res.render('pages/servicepro');  
+});
+
+app.get('/Checkout', (req, res) => {
+  res.render('pages/Checkout');  
+});
+
 // Start the server
 app.listen(8080, () => {
   console.log('Server is listening on port 8080');

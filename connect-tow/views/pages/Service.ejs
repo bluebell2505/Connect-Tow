@@ -6,7 +6,8 @@
     <title>Car Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <style>* {
+    <style>
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -176,34 +177,29 @@
     </div>
 
     <script>
-        // script.js
+        const serviceLinks = {
+            service1: '/servicepro',
+            service2: '/servicepro',
+            service3: '/servicepro',
+            service4: '/servicepro',
+            service5: '/servicepro',
+            service6: '/servicepro',
+            service7: '/servicepro',
+            service8: '/servicepro',
+            service9: '/servicepro',
+            service10: '/servicepro',
+            service11: '/servicepro',
+            service12: '/servicepro'
+        };
 
-// Add the links to the services
-const serviceLinks = {
-    service1: 'periodic-services.html',
-    service2: 'ac-service-repair.html',
-    service3: 'batteries.html',
-    service4: 'tyres-wheel-care.html',
-    service5: 'denting-painting.html',
-    service6: 'detailing-services.html',
-    service7: 'car-spa-cleaning.html',
-    service8: 'car-inspections.html',
-    service9: 'windshields-lights.html',
-    service10: 'suspension-fitments.html',
-    service11: 'clutch-body-parts.html',
-    service12: 'insurance-claims.html'
-};
-
-// Add event listeners to the service cards
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('click', () => {
-        const cardId = card.id;
-        if (serviceLinks[cardId]) {
-            window.location.href = serviceLinks[cardId];
-        }
-    });
-});
-
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const cardId = card.id;
+                if (serviceLinks[cardId]) {
+                    window.location.href = serviceLinks[cardId];
+                }
+            });
+        });
     </script>
 </body>
 </html>
