@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tow Connect</title>
+    <style>
+        /* Base Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; 
+  padding: 15px 30px;
+  height: 80px; 
+  max-width: 100%;
+  width: 80%; /* Adjusted to occupy full width */
+
+  position: fixed; 
+  top: 0; 
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 25px; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black; /* Changed to black for visibility */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6600; 
+}
+
+.login-btn {
+  background: transparent;
+  color: #ff6600;
+  border: 2px solid #ff6600;
+  padding: 8px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+  margin-right: 40px;
+}
+
+.login-btn:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* Stack items vertically */
+      padding: 10px 20px; /* Reduce padding */
+  }
+
+  .nav-links {
+      flex-direction: column; /* Stack links vertically */
+      align-items: center; /* Center align the links */
+  }
+
+  .nav-links li {
+      margin: 10px 0; /* Space between links */
+  }
+
+  .login-btn {
+      margin-right: 0; /* Remove right margin on smaller screens */
+      margin-top: 10px; /* Add space above button */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      padding: 5px 10px; /* Further reduce padding for smaller devices */
+  }
+
+  .nav-links a {
+      font-size: 16px; /* Smaller font size for mobile */
+  }
+
+  .login-btn {
+      padding: 6px 15px; /* Adjust button padding */
+      font-size: 14px; /* Adjust button font size */
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="/path/to/logo.png" alt="Tow Connect Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/service-map">Towing Assistance</a></li>
+                <li><a href="/repair-maintenance">Repair & Maintenance</a></li>
+            </ul>
+        </nav>
+        <div class="login">
+            <span id="account-icon" style="display: none;">👤</span>
+        </div>
+    </header>
+    
+    <script>
+        // JavaScript functionality can be added here if needed
+    </script>
+</body>
+</html>
